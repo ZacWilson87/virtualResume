@@ -1,0 +1,14 @@
+{
+  "name": "resumesite",
+  "version": "0.0.1",
+  "description": "resume website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zac Wilson",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
