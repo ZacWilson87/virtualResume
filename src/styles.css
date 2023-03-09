@@ -4,7 +4,7 @@
 /* declare variable */
 :root{
     --primary: #6B0DAC;
-    --secondary: #d36eec;
+    --secondary: #FF8A8A;
 }
 
 body {
@@ -31,6 +31,8 @@ h1 {
     object-fit: cover;
     width: 224px;
     height: 217px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 a {
