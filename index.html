@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- load in ./src/app.html -->
+
+</head>
+<body>
+    <!-- script to load in src/app.html -->
+    <script>
+        const app = document.getElementById('app');
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', './src/app.html', true);
+        xhr.onload = function() {
+            if (this.status === 200) {
+                app.innerHTML = this.responseText;
+            }
+        }
+        xhr.send();
+    </script>
+    <div class="app"></div>
+</body>
+</html>
