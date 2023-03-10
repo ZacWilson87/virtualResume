@@ -1,3 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Oswald:wght@500&display=swap');
+
+/* sass variables in css */
+/* declare variable */
+:root{
+    --primary: #6B0DAC;
+    --secondary: #FF8A8A;
+}
+
+body {
+    background-color: rgb(185, 104, 244) !important;
+    background-image: url(../images/BG.svg) !important;
+    background-size: cover !important;
+    background-blend-mode: color-burn !important;
+    background-repeat: no-repeat !important;
+    color: white;
+    font-family: 'Barlow', 'Montserrat', sans-serif !important;    
+}
+
+hr {
+    border: 2px solid var(--secondary) !important;
+}
+
+h1 {
+    font-size: 3rem !important;
+    font-family: 'Oswald', 'Barlow', sans-serif !important;
+}
+
+#hero-image {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 224px;
+    height: 217px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.socialIcons > a {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px 7px;
+}
+
+.socialIcons_icon--hover {
+    border: 1px solid white!important;
+    background-color: var(--secondary);
+    border-radius: 5px;
+    padding: 5px 7px;
+}
+
+#skills-logos > img {
+    margin: 0 auto;
+}
+
+.wavy {
+    width: 50px;
+    height: 100%;
+    margin-left: -6px ;
+}
+
 @charset "UTF-8";
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
