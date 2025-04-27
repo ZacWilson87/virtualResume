@@ -1,4 +1,3 @@
-// Function to load CSS files
 function loadCSS(url) {
     return new Promise((resolve, reject) => {
         const link = document.createElement('link');
@@ -10,7 +9,6 @@ function loadCSS(url) {
     });
 }
 
-// Function to preload images
 function preloadImages(html) {
     const temp = document.createElement('div');
     temp.innerHTML = html;
@@ -26,7 +24,6 @@ function preloadImages(html) {
     return Promise.all(imagePromises);
 }
 
-// Function to initialize theme
 function initializeTheme() {
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const currentTheme = localStorage.getItem('theme') || 
@@ -35,7 +32,7 @@ function initializeTheme() {
     return currentTheme;
 }
 
-// Function to setup theme toggle
+
 function setupThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     if (!themeToggle) return;
@@ -47,13 +44,11 @@ function setupThemeToggle() {
     });
 }
 
-// Function to load content
 async function loadContent() {
     const app = document.getElementById('app');
     const spinner = document.getElementById('loading-spinner');
     
     try {
-        // Load CSS files first
         await loadCSS('./src/styles.css');
         await loadCSS('../sass/main.css');
         
