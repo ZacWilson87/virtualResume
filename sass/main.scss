@@ -1,6 +1,14 @@
+// Color palette
+$light-bg: #F9F7F7;
+$light-blue: #DBE2EF;
+$medium-blue: #3F72AF;
+$dark-blue: #112D4E;
 
-$primary: #6B0DAC;
-$secondary: #FF8A8A;
+// Bootstrap overrides
+$primary: $medium-blue;
+$secondary: $light-blue;
+$body-bg: $light-bg;
+$body-color: $dark-blue;
 
 $font-size-base: 1.2rem;
 

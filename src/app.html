@@ -5,146 +5,190 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/styles.css" />
-    <link rel="stylesheet" href="../sass/main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <title>Zachery R. Wilson &#8212 Resume</title>
 </head>
 
 <body>
-    <div class="container p-0 border border-3 border-top-0 border-bottom-0 border-primary">
-        <div class="row p-0 m-0">
-            <div class="col-3 bg-primary text-white mx-0 px-0" style="min-height: 100vh">
-                <div class="row me-0">
-                    <div class="heroContainer py-4">
-                        <div id="hero-image-wrap" class="d-flex justify-content-center">
-                            <img src="../images/ZacHeadshot.jpg" alt="" id="hero-image" width="200" />
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+    <div id="app" class="hidden">
+        <div class="resume-container">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="profile">
+                    <img src="../images/ZacHeadshot.jpg" alt="Zachery Wilson" class="profile-image" />
+                    <div class="profile-info">
+                        <h1>Zachery Wilson</h1>
+                        <h2>Full Stack Developer</h2>
+                        <p class="location">Fayetteville, Arkansas</p>
+                    </div>
+                </div>
+                <div class="header-controls">
+
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/zachery-wilson-792bb01b5/" class="contact-link">
+                            <img src="../images/contactIcons/linkedIn.svg" alt="LinkedIn" />
+                        </a>
+                        <a href="https://github.com/ZacWilson87" class="contact-link">
+                            <img src="../images/contactIcons/github.svg" alt="GitHub" />
+                        </a>
+                        <a href="mailto:zilson1987@gmail.com" class="contact-link">
+                            <img src="../images/contactIcons/email.svg" alt="Email" />
+                        </a>
+                    </div>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Skills Section -->
+            <section class="skills-section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Vue</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">Svelte</span>
                         </div>
-                        <div id="hero-text" class="">
-                            <h1 id="hero-text" class="text-center mt-3 mb-0">Zachery</h1>
-                            <h1 id="hero-text" class="text-center mt-0">Wilson</h1>
-                            <p class="text-center mb-0 mt-3">Full Stack Developer</p>
-                            <p class="text-center">Fayetteville, Arkansas</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">C#</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Web Technologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Sass</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS Lambda</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Tailwind</span>
+                            <span class="skill-tag">WordPress</span>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-5">
-                    <div id="contact-section" class="d-flex flex-column">
-                        <h6 class="text-center fw-bold mb-0">CONTACT</h6>
-                        <hr class="w-50 mx-auto border-secondary border border-2" />
-                        <div class="d-flex justify-content-center py-3">
-                            <div class="socialIcons d-flex justify-content-around w-50">
-                                <a href="https://www.linkedin.com/in/zachery-wilson-792bb01b5/" class="text-center"><img
-                                        src="../images/contactIcons/linkedIn.svg" alt="linkedIn logo" width="40" /></a>
-                                <a href="https://twitter.com/zac_wilson87" class="text-center"><img
-                                        src="../images/contactIcons/twitter.svg" alt="twitter logo" width="40" /></a>
-                                <a href="https://github.com/ZacWilson87" class="text-center"><img
-                                        src="../images/contactIcons/github.svg" alt="github logo" width="40" /></a>
-                                <a href="mailto:zilson1987@gmail.com"><img src="../images/contactIcons/email.svg" alt=""
-                                        width="40" /></a>
-                            </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience-section">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Software Engineer</h3>
+                            <h4>Meta</h4>
+                            <p class="timeline-date">2023 — Present</p>
+                            <p>Developed internal tools and applications to streamline workflows and improve
+                                productivity
+                                for Meta employees.
+                                Collaborated with cross-functional teams to identify pain points and implement solutions
+                                that enhanced
+                                the efficiency of various business processes. Utilized modern web technologies and best
+                                practices to
+                                create scalable and maintainable applications.</p>
                         </div>
                     </div>
-                    <div id="skills-section" class="d-flex flex-column mt-5 px-4">
-                        <h6 class="text-center fw-bold mb-0">SKILLS</h6>
-                        <hr class="w-50 align-self-center border-secondary" />
-                        <div class="d-flex align-items-center justify-content-center my-3" id="skills-logos">
-                            <img src="../images/angular.svg" alt="angular icon" width="40" />
-                            <img src="../images/vue.svg" alt="vue icon" width="40" />
-                            <img src="../images/node.svg" alt="node icon" width="40" />
-                            <img src="../images/cSharp.svg" alt="c sharp icon" width="40" />
-                            <img src="../images/javascript.svg" alt="javascript icon" width="40" />
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Software Engineer III</h3>
+                            <h4>Affirma Consulting</h4>
+                            <p class="timeline-date">2021 — Present</p>
+                            <p>Responsible for leading teams while developing, testing, & maintaining software
+                                applications
+                                for clients. This includes collaborating with project managers & other team members to
+                                identify client needs, designing & implementing solutions, & troubleshooting issues. The
+                                role also involves keeping up-to-date with new technologies & best practices in software
+                                engineering.</p>
                         </div>
-                        <div class="d-flex align-items-center justify-content-center mb-3" id="skills-logos">
-                            <img src="../images/css.svg" alt="css icon" width="40" />
-                            <img src="../images/html.svg" alt="html icon" width="40" />
-                            <img src="../images/sass.svg" alt="sass icon" width="45" />
-                            <img src="../images/svelte.svg" alt="svelte icon" width="40" />
-                            <img src="../images/react.svg" alt="react icon" width="40" />
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Teacher Assistant</h3>
+                            <h4>LaunchCode</h4>
+                            <p class="timeline-date">2022 — 2023</p>
+                            <p>Aided lead instructor, managing a group of 25 students and their learning experience.
+                                Grading, debugging, and office hours.</p>
                         </div>
-                        <div class="d-flex align-items-center justify-content-around mb-3" id="skills-logos">
-                            <img src="../images/php.svg" alt="php icon" width="40" />
-                            <img src="../images/bootstrap.svg" alt="bootstrap icon" width="40" />
-                            <img src="../images/tailwind.svg" alt="tailwind icon" width="40" />
-                            <img src="../images/wordpress.svg" alt="wordpress icon" width="40" />
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Restaurant Manager</h3>
+                            <h4>Eureka Systems</h4>
+                            <p class="timeline-date">2017 — 2021</p>
+                            <p>Led daily operations of a high-volume restaurant, managing a team of 20+ staff members.
+                                Implemented efficient workflows and inventory management systems to optimize costs and
+                                reduce waste.
+                                Developed and maintained strong customer relationships, resulting in increased repeat
+                                business.
+                                Trained and mentored staff in customer service and operational procedures, ensuring
+                                consistent quality
+                                and service standards.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-9 bg-white d-flex flex-column position-relative ms-0 ps-0">
-                <div class="wavy position-absolute">
-                    <img src="../images/wavy3.svg" class="wavy">
-                </div>
-                <div class="container ms-5">
-                    <h6 class="text-primary fw-bold text-center mt-3 pe-4">
-                        PROFESSIONAL EXPERIENCE
-                    </h6>
-                    <hr width="50%" class="mx-auto border border-secondary pe-4" />
-                    <div class="pt-3 me-5 ms-1 px-4 pb-1 mt-2 border border-3 border-primary rounded-3">
-                        <h6 class="text-primary fw-bold">SOFTWARE ENGINEER II, AFFIRMA CONSULTING</h6>
-                        <h6 class="text-primary fw-bold border border-primary border-3 rounded-3 px-2 py-1"
-                            style="max-width: fit-content;">2021 &#8212 N/A</h6>
-                        <p>
-                            Responsible for leading teams while developing, testing, & maintaining software
-                            applications for clients. This includes collaborating with
-                            project managers & other team members to identify client
-                            needs, designing & implementing solutions, & troubleshooting
-                            issues. The role also involves keeping up-to-date with new
-                            technologies & best practices in software engineering.
-                        </p>
+            </section>
+
+            <!-- Education Section -->
+            <section class="education-section">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>LaunchCode</h3>
+                            <p class="timeline-date">2020 — 2021</p>
+                            <p>10-month intensive software engineering program that teaches the fundamentals of web
+                                development. Focused on the following technologies: HTML, CSS, JavaScript, Bootstrap,
+                                Angular, Java, Spring, & SQL. The program also teaches best practices in software
+                                engineering such as test-driven development, pair programming, & agile development.</p>
+                        </div>
                     </div>
-                    <div class="pt-3 me-5 ms-1 px-4 pb-1 mt-2 border border-3 border-primary rounded-3">
-                        <h6 class="text-primary fw-bold">TEACHER ASSISTANT, LAUNCHCODE</h6>
-                        <h6 class="text-primary fw-bold border border-primary border-3 rounded-3 px-2 py-1"
-                            style="max-width: fit-content;">2022 &#8212 2023</h6>
-                        <p>
-                            Aided lead instructor, managing a group of 25 students and their learning experience. 
-                            Grading, debugging, and office hours.
-                        </p>
-                    </div>
-                    <div class="pt-3 me-5 ms-1 px-4 pb-1 mt-2 border border-3 border-primary rounded-3">
-                        <h6 class="text-primary fw-bold">GENERAL MANAGER, EUREKA SYSTEMS</h6>
-                        <h6 class="text-primary fw-bold border border-primary border-3 rounded-3 px-2 py-1"
-                            style="max-width: fit-content;">2017 &#8212 2021</h6>
-                        <p>
-                            Responsible for developing, testing, & maintaining software
-                            applications for clients. This includes collaborating with
-                            project managers & other team members to identify client
-                            needs, designing & implementing solutions, & troubleshooting
-                            issues. The role also involves keeping up-to-date with new
-                            technologies & best practices in software engineering.
-                        </p>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Art Institutes International, MN</h3>
+                            <p class="timeline-date">2006 — 2008</p>
+                            <p>Received a comprehensive graphic design education covering various aspects such as
+                                typography, layout, branding, & software proficiency in Adobe Photoshop, Illustrator, &
+                                InDesign. Through hands-on experience, I developed the skills necessary for a successful
+                                career in graphic design.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="container ms-5">
-                    <h6 class="text-primary fw-bold text-center mt-4 pe-4">EDUCATION</h6>
-                    <hr width="50%" class="mx-auto border border-secondary pe-4" />
-                    <div class="pt-3 me-5 ms-1 px-4 pb-1 mt-2 border border-3 border-primary rounded-3">
-                        <h6 class="text-primary fw-bold">LAUNCHCODE, VIRTUAL</h6>
-                        <h6 class="text-primary fw-bold border border-primary border-3 rounded-3 px-2 py-1"
-                            style="max-width: fit-content;">2020 &#8212 2021</h6>
-                        <p>
-                            8-month intensive software engineering program that teaches the fundamentals of web
-                            development. Focused on the following technologies: HTML, CSS, JavaScript, Bootstrap,
-                            Angular, Java, Spring, & SQL. The program also teaches best practices in software
-                            engineering
-                            such as test-driven development, pair programming, & agile development.
-                        </p>
-                    </div>
-                    <div class="pt-3 me-5 ms-1 px-4 pb-1 mt-2 border border-3 border-primary rounded-3 mb-4">
-                        <h6 class="text-primary fw-bold">ART INSTITUTES INTERNATIONAL, MN</h6>
-                        <h6 class="text-primary fw-bold border border-primary border-3 rounded-3 px-2"
-                            style="max-width: fit-content;">2006 &#8212 2008</h6>
-                        <p>
-                            Received a comprehensive graphic design education covering
-                            various aspects such as typography, layout, branding, &
-                            software proficiency in Adobe Photoshop, Illustrator, &
-                            InDesign. Through hands-on experience, I developed the skills
-                            necessary for a succesful career in graphic design.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
     </div>
     <script src="./src/app.js"></script>
