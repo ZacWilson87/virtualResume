@@ -49,12 +49,12 @@ async function loadContent() {
     const spinner = document.getElementById('loading-spinner');
     
     try {
-        await loadCSS('./src/styles.css');
-        await loadCSS('../sass/main.css');
+        await loadCSS('/virtualResume/src/styles.css');
+        await loadCSS('/virtualResume/sass/main.css');
         
         // Then load the content
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', './src/app.html', true);
+        xhr.open('GET', '/virtualResume/src/app.html', true);
         xhr.onload = async function() {
             if (this.status === 200) {
                 // Create a temporary container to parse the HTML
