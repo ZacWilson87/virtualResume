@@ -64,7 +64,24 @@ h1 {
 
 a {
     text-decoration: none !important;
-    color: #112D4E !important;
+    color: var(--text) !important;
+    transition: color 0.3s ease;
+}
+
+#seedgenius-link {
+    color: var(--primary) !important;
+    font-weight: 500;
+    text-decoration: underline !important;
+    text-underline-offset: 2px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+#seedgenius-link:hover {
+    opacity: 0.8;
+}
+
+[data-theme="dark"] #seedgenius-link {
+    color: var(--primary) !important;
 }
 
 .socialIcons>a {
