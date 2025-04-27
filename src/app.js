@@ -1,3 +1,5 @@
+import config from './config.js';
+
 function loadCSS(url) {
     return new Promise((resolve, reject) => {
         const link = document.createElement('link');
@@ -49,12 +51,12 @@ async function loadContent() {
     const spinner = document.getElementById('loading-spinner');
     
     try {
-        await loadCSS('/virtualResume/src/styles.css');
-        await loadCSS('/virtualResume/sass/main.css');
+        await loadCSS(`${config.basePath}/src/styles.css`);
+        await loadCSS(`${config.basePath}/sass/main.css`);
         
         // Then load the content
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', '/virtualResume/src/app.html', true);
+        xhr.open('GET', `${config.basePath}/src/app.html`, true);
         xhr.onload = async function() {
             if (this.status === 200) {
                 // Create a temporary container to parse the HTML
@@ -63,6 +65,15 @@ async function loadContent() {
                 
                 // Get the content from the resume-container
                 const content = temp.querySelector('.resume-container');
+                
+                // Update image paths based on environment
+                const images = content.getElementsByTagName('img');
+                Array.from(images).forEach(img => {
+                    const currentSrc = img.getAttribute('src');
+                    if (currentSrc.startsWith('/virtualResume/')) {
+                        img.setAttribute('src', currentSrc.replace('/virtualResume/', config.basePath + '/'));
+                    }
+                });
                 
                 // Preload all images before showing content
                 try {
